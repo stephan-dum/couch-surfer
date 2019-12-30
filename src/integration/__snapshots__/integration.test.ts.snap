@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`integration deep object value identifier look up 1`] = `
+"const _temp = {
+  \\"age\\": 23
+};
+const age = 23;
+const result = _temp.age <= age;"
+`;
+
+exports[`integration dont remove const declaration 1`] = `
+"const _temp = {
+  \\"age\\": 23
+};
+const selector = {
+  \\"age\\": {
+    \\"$lte\\": \\"23\\"
+  }
+};
+const lte = selector[\\"$lte\\"];
+_temp.age <= \\"23\\";"
+`;
+
+exports[`integration move array declaration 1`] = `
+"const _temp = [{
+  \\"age\\": 23
+}];
+_temp && _temp[\\"some\\"](_data => _data.age <= \\"23\\");"
+`;
+
+exports[`integration move object declaration 1`] = `
+"const _temp = {
+  \\"age\\": 23
+};
+_temp.age <= \\"23\\";"
+`;
+
+exports[`integration remove unused const declaration 1`] = `
+"const _temp = {
+  \\"age\\": 23
+};
+_temp.age <= \\"23\\";"
+`;
+
+exports[`integration removes empty selector expressions 1`] = `
+"const _temp = {
+  \\"age\\": 23
+};"
+`;

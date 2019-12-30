@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+"doc => {
+  return doc.results && doc.results[\\"every\\"](_data => _data >= 82 && _data <= 88);
+};"
+`;
+
+exports[` 2`] = `
+"doc => {
+  return doc.wears && doc.wears[\\"every\\"](_data => _data.defense >= 1 && _data.defense < 3);
+};"
+`;
