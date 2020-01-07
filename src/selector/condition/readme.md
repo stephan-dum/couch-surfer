@@ -33,5 +33,19 @@ Miscellaneous 	$mod 	[Divisor, Remainder] 	Divisor and Remainder are both positi
 
 
 
+#proposals
 
+%param% and $field
 
+semantic meaning of reg exp in $eq
+
+$expr
+db.monthlyBudget.find( { $expr: { $gt: [ "$spent" , "$budget" ] } } )
+{ "_id" : 1, "category" : "food", "budget": 400, "spent": 450 }
+
+$where
+
+https://docs.mongodb.com/manual/reference/operator/query/where/
+db.players.find( { $where: function() {
+   return (hex_md5(this.name) == "9b53e667f30cd329dca1ec9e6a83e994")
+} } );
